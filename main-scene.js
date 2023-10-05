@@ -54,7 +54,7 @@ export default class mainScene extends Phaser.Scene {
 		this.fillField();
 		this.createTile();
 		this.scoreTab.restartCount();
-		this.movementPause = 1000;
+		this.movementPause = 800;
 	}
 
 	createTile() {
@@ -66,10 +66,15 @@ export default class mainScene extends Phaser.Scene {
 	checkMovement() {
 		if (!this.canMove || this.gameEnded || this.movementPause > 0) return;
 
-		if (this.cursorKeys.left.isDown) this.moveTiles(0, -1);
-		if (this.cursorKeys.right.isDown) this.moveTiles(0, 1);
-		if (this.cursorKeys.up.isDown) this.moveTiles(-1, 0);
-		if (this.cursorKeys.down.isDown) this.moveTiles(1, 0);
+		if (this.cursorKeys.left.isDown) {
+			this.moveTiles(0, -1);
+		} else if (this.cursorKeys.right.isDown) {
+			this.moveTiles(0, 1);
+		} else if (this.cursorKeys.up.isDown) {
+			this.moveTiles(-1, 0);
+		} else if (this.cursorKeys.down.isDown) {
+			this.moveTiles(1, 0);
+		}
 	}
 
 	mouseMove(event) {
@@ -99,7 +104,7 @@ export default class mainScene extends Phaser.Scene {
 		let inMovement = false;
 		this.canMove = false;
 		this.movingTiles = 0;
-		this.movementPause = 1000;
+		this.movementPause = 800;
 
 		inMovement = this.tilesLogic.moveTiles(rowChange, collumnChange);
 
