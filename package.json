@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "phaser": "^3.60.0",
+    "phaser-raycaster": "^0.10.9",
+    "phaser3-rex-plugins": "^1.60.6"
+  }
+}

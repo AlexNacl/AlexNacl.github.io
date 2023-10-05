@@ -1,0 +1,35 @@
+#game-screen {
+    position: absolute;
+    top: 150px;
+    height: 365px;
+    width: 365px;
+}
+
+#score-background {
+    position: absolute;
+    top: 56px;
+    left: 56px;
+}
+
+#score-board {
+    position: absolute;
+    top: 58px;
+    left: 38%;
+}
+
+#game-container{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    height: 500px;
+    width: 365px;
+}
+
+#startBtn{
+    position: absolute;
+    top: 10px;
+    left: 42%;
+    background-image: url('img/ScoreBackground.png');
+    background-size: contain;
+    border: none;
+}
