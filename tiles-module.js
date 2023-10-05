@@ -38,7 +38,7 @@ export default class Tiles {
             this.scene.tweens.add({
                 targets: [this.tiles[randomTile.row][randomTile.col].tileSprite],
                 alpha: 1,
-                duration: 200,
+                duration: 50,
                 onComplete: function (tween) {
                     tween.parent.scene.canMove = true;
                 },
@@ -118,7 +118,7 @@ export default class Tiles {
             targets: [tile.tileSprite],
             x: this.Utils.tilePosition(col),
             y: this.Utils.tilePosition(row),
-            duration: 200 * distance,
+            duration: 50 * distance,
             onComplete: function (tween) {
                 tween.parent.scene.movingTiles--;
                 if (tween.parent.scene.movingTiles === 0) {

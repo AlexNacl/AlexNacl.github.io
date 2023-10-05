@@ -54,7 +54,7 @@ export default class mainScene extends Phaser.Scene {
 		this.fillField();
 		this.createTile();
 		this.scoreTab.restartCount();
-		this.movementPause = 800;
+		this.movementPause = 500;
 	}
 
 	createTile() {
@@ -104,7 +104,7 @@ export default class mainScene extends Phaser.Scene {
 		let inMovement = false;
 		this.canMove = false;
 		this.movingTiles = 0;
-		this.movementPause = 800;
+		this.movementPause = 500;
 
 		inMovement = this.tilesLogic.moveTiles(rowChange, collumnChange);
 
